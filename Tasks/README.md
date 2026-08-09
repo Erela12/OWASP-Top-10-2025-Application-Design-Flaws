@@ -114,7 +114,7 @@
 
   ![OWASP-Top-10-2025-Application-Design-Flaws](images/task-3-process.jpg)
 
- AS04: Cryptographic Failures
+# AS04: Cryptographic Failures
 
 ### Introduction
 * This room tell about Cryptographic Failures
@@ -150,5 +150,39 @@
 * const SECRET_KEY = "my-secret-key-16"; const ENCRYPTION_MODE = "ECB"; const KEY_SIZE = 128;
 
   ![OWASP-Top-10-2025-Application-Design-Flaws](Images/task4.jpg)
+  ![OWASP-Top-10-2025-Application-Design-Flaws](
   
+# Insecure Design
+
+### Introduction
+
+* This room tell about  Insecure Design
+* What it is  Insecure Design
+* Why it matters 
+* Its Common patterns
+* How to prevent it
+* flag
+
+### Objective
+* This rooms objective it to teach us about Insecure Design and its cause how to prevent it and it gave a practical example
+
+### What i learned 
+
+#### What it is Insecure Design
+
+* This happens from the start when insecure design happens when defective logic or architecture is built into a system from the start
+* Developers often assume that models are safe, correct, or predictable, or that the code they produce is flaw-free
+* The perfect example is the Clubhouse
   
+#### Why it matters and  Its Common patterns
+* You can’t fix insecure design just by patching it. You need to change the way the system is designed, how it makes decisions, and how it handles trust and access.
+* The common patterns are Weak recovery or approval processes, Wrong assumptions about users or AI behavior, AI systems with too much access, Missing safety controls for AI and automation, Test or debug features left enabled, No proper security testing or AI threat modeling  
+
+####  How to prevent it or How to design securely 
+
+* Treat AI models as untrusted
+* Validate all inputs and outputs
+* Separate system prompts from user content
+* Protect sensitive data
+* Require human approval for high-risk AI actions
+* Monitor AI behavior and data sources
