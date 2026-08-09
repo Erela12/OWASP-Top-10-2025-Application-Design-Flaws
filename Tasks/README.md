@@ -34,15 +34,15 @@
 * We were asked to navigate , the developer left too many traces so how can we solve it
 * In our browser we do http://MACHINE_IP:5002
 
-
+![Task 2](images/task-2.jpg)
 
 * First lets try the normal API "http://MACHINE_IP:5002/api/user/123"
 
-
+![When We Use Number](images/when-we-use-number.jpg)
 
 * But one important key the application says User ID must be numeric so instead of number we try a word or letters
 
-
+![When We Don't Use Number](images/when-we-dont-use-number.jpg)
 
 * This is where the vulnerability appears we will get the flag
 * The server should've just said Invalid user ID. but it exposes internal debugging information.
@@ -82,35 +82,36 @@
 * The code the developer used is outdated and imports an old lib/vulnerable_utils.py component we were asked to debug it
 * We open http://MACHINE_IP:5003
 
+ ![Task 3 - Interface](images/task-3-inteface.jpg)
 
 * It used outdated and old component so we go to its source code , on the source code we have an interesting part
 
-
+  ![Data Debug](images/data-debug-code.jpg)
 
 * The code means if we send debug as the data, the application will call debug info().
 * So we will go to api/process and do inspect go to network then we will edit and resend it so the process is change the new request GET to POST
+  
+![Task 3 - Editing](images/task-3-editing.jpg)
 
- 
-
-
+![Task 3 - GET to POST](images/task-3-get-to-post.jpg) 
 
 * Then we go Headers then add content and content type which is application/json
 
-
+![Task 3 - Content Type](images/task-3-content-content-type.jpg)
 
 * After that we go Body and first we do a test we do
 ```
 {"test":"test"}
 ```
-
+![Task 3 - Test](images/task-3-test-test.jpg)
 
 * And it will give us our final clue which is "Missing data parameter" so we change the Body to
   ```
   {"data":"debug"}
   ```
 * We hit send and we found our flag
-
-
+  
+![Task 3 - Process](images/task-3-process.jpg)
 
 # AS04: Cryptographic Failures
 
@@ -147,6 +148,8 @@
 * We are given the encrypted document we just need to know how to decrypt it we were given some clues like
 * const SECRET_KEY = "my-secret-key-16"; const ENCRYPTION_MODE = "ECB"; const KEY_SIZE = 128;
 
+![Task 4](images/task-4.jpg)
+![Task 4 Flag](images/task-4-flag.jpg)
   
 # Insecure Design
 
@@ -185,4 +188,22 @@
 
 #### Flag
 
-*
+* The developers only thought that only mobile devices can access it
+  
+![Task 5 Interface](images/task-5-interface.jpg)
+
+* We do api/users to find the user names in the mobile app
+  
+ ![Task 5 Users](images/task-5-users.jpg)
+ 
+* We found the users and we need to see the admins message to see it we do api/messages/admin
+ 
+ ![Task 5 Flag](images/task-5-flag.jpg)
+
+we found it!!!
+
+  
+
+
+
+
