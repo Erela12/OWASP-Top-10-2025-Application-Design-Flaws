@@ -34,7 +34,7 @@
 * We were asked to navigate , the developer left too many traces so how can we solve it
 * In our browser we do http://MACHINE_IP:5002
 
-  ![OWASP-Top-10-2025-Application-Design-Flaws](images/task2.jpg)
+  ![OWASP-Top-10-2025-Application-Design-Flaws](Images/task-2.jpg)
 
 * First lets try the normal API "http://MACHINE_IP:5002/api/user/123"
 
@@ -115,4 +115,40 @@
   ![OWASP-Top-10-2025-Application-Design-Flaws](images/task-3-process.jpg)
 
  AS04: Cryptographic Failures
+
+### Introduction
+* This room tell about Cryptographic Failures
+* What it is Cryptographic Failures
+* Why it matters 
+* Its Common patterns
+* How to prevent it
+* flag
+
+### Objective
+* This rooms objective it to teach us about Cryptographic Failures and its cause how to prevent it and it gave a practical example
+
+### What i learned 
+
+#### What it is Software Supply Chain Failures
+
+* Cryptographic failures happen when encryption is used incorrectly or not at all. This includes weak algorithms, hard-coded keys, poor key handling, or unencrypted sensitive data
+
+#### Why it matters and  Its Common patterns
+* Web applications rely on cryptography everywhere: protecting network traffic, securing stored data, verifying identities, and safeguarding secrets
+*  When Cryptographic failures happen sensitive data such as passwords, tokens, or personal information can be exposed
+* The common patterns using weak encryption, hard-coded secrets, poor key management, invalid TLS certificates
+
+####  How to prevent it
+* Use strong encryption like AES-GCM or ChaCha20-Poly1305
+* Store keys securely
+* Rotate keys and secrets regularly
+* Use valid TLS certificates
+* Protect secrets in AI systems
+
+#### Flag
+* We are given the encrypted document we just need to know how to decrypt it we were given some clues like
+* const SECRET_KEY = "my-secret-key-16"; const ENCRYPTION_MODE = "ECB"; const KEY_SIZE = 128;
+
+  ![OWASP-Top-10-2025-Application-Design-Flaws](Images/task4.jpg)
+  
   
